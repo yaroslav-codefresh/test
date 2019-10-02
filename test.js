@@ -1,0 +1,4 @@
+// missspelll
+
+function missspelll() {
+}
