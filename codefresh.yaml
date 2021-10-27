@@ -1,0 +1,23 @@
+version: "1.0"
+hooks: # workflow level asdf asdf  asdf asdf
+  on_success:
+    exec:
+      image: alpine
+      commands:
+        - echo on_success
+    annotations:
+      set:
+        - entity_type: build
+          annotations:
+          - test: test
+steps:
+  echo:
+    image: alpine
+    commands:
+    - echo echo
+    hooks: # step level
+      on_elected:
+        exec:
+          image: alpine
+          commands:
+            - echo on_elected
